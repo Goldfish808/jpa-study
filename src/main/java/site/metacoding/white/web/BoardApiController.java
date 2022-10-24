@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
-import site.metacoding.white.domain.Board;
-import site.metacoding.white.domain.BoardRepository;
+import site.metacoding.white.domain.board.Board;
+import site.metacoding.white.domain.board.BoardRepository;
 import site.metacoding.white.service.BoardService;
 
 @RequiredArgsConstructor

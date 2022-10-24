@@ -1,4 +1,4 @@
-package site.metacoding.white.domain;
+package site.metacoding.white.domain.board;
 
 import java.util.List;
 

@@ -1,13 +1,16 @@
-package site.metacoding.white.domain;
+package site.metacoding.white.domain.board;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.Getter;
 import lombok.Setter;
+import site.metacoding.white.domain.user.User;
 
 @Setter
 @Getter
@@ -20,5 +23,9 @@ public class Board {
     @Column(length = 1000)
     private String content;
 
-    private String author;
+    // private String author; 지우기
+
+    // FK가 만들어짐
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User user;
 }

@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.RequiredArgsConstructor;
-import site.metacoding.white.domain.Board;
-import site.metacoding.white.domain.BoardRepository;
+import site.metacoding.white.domain.board.Board;
+import site.metacoding.white.domain.board.BoardRepository;
 
 @RequiredArgsConstructor
 @Service
@@ -29,7 +29,6 @@ public class BoardService {
         Board boardPS = boardRepository.findById(id);
         boardPS.setTitle(board.getTitle());
         boardPS.setContent(board.getContent());
-        boardPS.setAuthor(board.getAuthor());
         // 트랜잭션 시 더티 체킹
     }
 
