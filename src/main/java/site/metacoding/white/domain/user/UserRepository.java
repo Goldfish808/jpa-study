@@ -18,4 +18,10 @@ public class UserRepository {
         sM.persist(user);
     }
 
+    public User findByUsername(String username) {
+        return sM.createQuery("select u from User u where u.username = :username", User.class)
+                .setParameter("username", username)
+                .getSingleResult();
+    }
+
 }
